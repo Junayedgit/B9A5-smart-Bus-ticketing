@@ -2,6 +2,7 @@ let selectedSeats = 0; // Global variable to track selected seats
 const maxSeats = 4;    // Maximum allowed selections
 const seatPrice = 550; // Price per seat
 let selectedSeatNumbers = []; // Array to hold selected seat numbers
+let totalPrice = 0; // Global variable to hold the total price
 
 function buttonClick(elementId) {
     const button = document.getElementById(elementId);
@@ -78,7 +79,7 @@ function updateSelectedSeatList() {
     seatNoElement.innerHTML = ''; // Clear previous content
 
     // Reset total price
-    let totalPrice = 0;
+    totalPrice = 0; // Reset total price
 
     // Append each seat number in a table row
     selectedSeatNumbers.forEach(seat => {
@@ -97,3 +98,22 @@ function updateSelectedSeatList() {
     // Update total price in the DOM
     document.getElementById('TotalPrice').innerText = `BDT ${totalPrice}`;
 }
+
+const applyBtn = document.getElementById('apply-button');
+applyBtn.addEventListener('click', function () {
+    const discountInput = document.getElementById('couponInput');
+    const discount = discountInput.value;
+    console.log(discount);
+
+    if (discount === 'NEW15') {
+        const discountAmount = totalPrice * 0.15; // Calculate 15% discount
+        const discountedPrice = totalPrice - discountAmount; // Apply discount
+
+        console.log('Valid Code', `Discounted Price: BDT ${discountedPrice}`);
+        // Update the total price display with the discounted price
+        document.getElementById('discount-price').innerText = `BDT ${discountedPrice}`;
+    } else {
+        const Amount = totalPrice;
+        document.getElementById('discount-price').innerText = `BDT ${Amount}`;
+    }
+});
