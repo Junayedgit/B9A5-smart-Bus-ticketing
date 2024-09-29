@@ -112,7 +112,18 @@ applyBtn.addEventListener('click', function () {
         console.log('Valid Code', `Discounted Price: BDT ${discountedPrice}`);
         // Update the total price display with the discounted price
         document.getElementById('discount-price').innerText = `BDT ${discountedPrice}`;
-    } else {
+    }
+    else if (discount === 'NEW20' || discount === 'new20') {
+        const discountAmount = totalPrice * 0.20; // Calculate 15% discount
+        const discountedPrice = totalPrice - discountAmount; // Apply discount
+
+        console.log('Valid Code', `Discounted Price: BDT ${discountedPrice}`);
+        // Update the total price display with the discounted price
+        document.getElementById('discount-price').innerText = `BDT ${discountedPrice}`;
+
+    }
+
+    else {
         const Amount = totalPrice;
         document.getElementById('discount-price').innerText = `BDT ${Amount}`;
     }
