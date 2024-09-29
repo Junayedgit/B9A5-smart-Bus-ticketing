@@ -446,33 +446,33 @@
                                             </tr>
                                         </thead>
                                         <tbody id="SeatNo" class="seat-no-margin"></tbody>
-                                        <!-- Added class for margin -->
                                         <!-- This will display the selected seats -->
                                     </table>
                                 </div>
                             </div>
-
                         </div>
-
 
                         <img class="relative left-16 pb-4 pt-4" src="images/Line 6.png" alt="">
                         <div class="flex justify-between">
-                            <h3 class=" font-semibold pl-8">Total price</h3>
-                            <h3 id="TotalPrice" class=" font-semibold pr-8">BDT 1100</h3>
-
+                            <h3 class="font-semibold pl-8">Total price</h3>
+                            <h3 id="TotalPrice" class="font-semibold pr-8">BDT 0</h3> <!-- Initialize as 0 -->
                         </div>
-                        <!-- Voucher Section------------------------------------ -->
+
+                        <!-- Voucher Section -->
                         <div class="flex justify-center pt-4">
                             <div class="join">
-                                <input class="input input-bordered join-item" placeholder="Have any copupon?" />
-                                <button class="btn join-item rounded-r-full bg-[#1DD100] text-white ">Apply</button>
+                                <input class="input input-bordered join-item" placeholder="Have any coupon?"
+                                    id="couponInput" />
+                                <button class="btn join-item rounded-r-full bg-[#1DD100] text-white"
+                                    id="apply-button">Apply</button>
                             </div>
                         </div>
                         <div class="flex justify-between pt-6 pb-8">
-                            <h3 class=" font-semibold pl-8">Grand Total</h3>
-                            <h3 class="font-semibold pr-8">BDT 1100</h3>
+                            <h3 class="font-semibold pl-8">Grand Total</h3>
+                            <h3 id="discount-price" class="font-semibold pr-8">BDT 0</h3> <!-- Initialize as 0 -->
                         </div>
                     </div>
+
                     <!-- seat class price section end -->
                     <!-- Form Section -->
                     <div>
@@ -510,6 +510,7 @@
         </section>
         <script src="script/utility.js"></script>
         <script src="script/seat.js"></script>
+        <script src="script/discount.js"></script>
 
     </main>
     <footer class="footer bg-neutral text-neutral-content p-10 justify-around">
