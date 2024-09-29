@@ -1,1 +1,6 @@
 /*  bg-[url(images/banner.png)] bg-no-repeat bg-center  mt-7 */
+
+.seat-no-margin {
+    margin-right: 32px;
+    /* Apply left margin */
+}
