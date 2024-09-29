@@ -105,7 +105,7 @@ applyBtn.addEventListener('click', function () {
     const discount = discountInput.value;
     console.log(discount);
 
-    if (discount === 'NEW15') {
+    if (discount === 'NEW15' || discount === 'new15') {
         const discountAmount = totalPrice * 0.15; // Calculate 15% discount
         const discountedPrice = totalPrice - discountAmount; // Apply discount
 
